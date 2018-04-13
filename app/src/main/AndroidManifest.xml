@@ -42,7 +42,13 @@
         </service>
 
         <!-- TODO (4) Add your new service here, with an intent filter for action
-        com.google.firebase.MESSAGING_EVENT -->
+        com.google.firebase.MESSAGING_EVENT
+        This sevice listens for incoming messages -->
+        <service android:name=".fcm.SqualkFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGE_EVENT"/>
+            </intent-filter>
+        </service>
 
     </application>
 
